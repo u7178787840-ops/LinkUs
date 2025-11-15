@@ -1,0 +1,198 @@
+/* Fuente y estilo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #f5f7fa;
+}
+
+/* Menú de navegación */
+.menu {
+    width: 100%;
+    background-color: #2c3e50;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #f39c12;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Secciones generales */
+.seccion {
+    padding: 50px 20px; /* Reducido para menos espacio */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: auto;
+}
+
+/* Hero */
+#hero {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 100px 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+#hero p {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.imagen-hero {
+    width: 100%;
+    max-width: 700px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-hero:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* Caja decorativa */
+.caja-decorativa {
+    background: linear-gradient(145deg, #ffffff, #f1f5f9);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    max-width: 500px;
+    width: 90%;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Imagen lateral */
+.imagen-lateral {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-lateral:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* Desktop: lateral al lado del texto */
+@media (min-width: 768px) {
+    #presentacion, #quienes-somos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .caja-decorativa {
+        margin: 0;
+        max-width: 50%;
+    }
+
+    .imagen-lateral {
+        margin-top: 0;
+        margin-left: 20px;
+    }
+}
+
+/* Sección Contacto */
+.contacto-section {
+    background: linear-gradient(135deg, #25D366, #C13584, #010101);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.contacto-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de botones */
+.botones-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.btn-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 180px;
+}
+
+.btn-contacto a {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.icono-red {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icono-red:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Texto debajo del logo */
+.btn-contacto p {
+    margin: 0;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
