@@ -1,78 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LinkUs</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>LinkUs</h1>
-            <p>Conecta. Comparte. Crece en comunidad.</p>
-            <a href="#quienes" class="hero-btn">Descubrir más</a>
-        </div>
-
-        <div class="hero-img-card">
-            <img src="imagenes/hero.jpg" alt="Logo LinkUs">
-        </div>
-
-        <div class="hero-wave"></div>
-    </section>
-
-    <!-- QUIÉNES SOMOS -->
-    <section id="quienes" class="section">
-        <h2>¿Quiénes somos?</h2>
-        <p>
-            Somos una comunidad universitaria de la UFV creada para unir a estudiantes de todas las facultades.
-            Aquí puedes descubrir eventos, conocer gente nueva y formar parte de un espacio donde
-            todo el mundo tiene lugar.
-        </p>
-        <img src="imagenes/quienes-somos.jpg" class="section-img">
-    </section>
-
     <!-- PRESENTACIÓN -->
-    <section class="section">
+    <section class="presentacion fade-in">
         <h2>Presentación</h2>
         <p>
-            Nuestro objetivo es hacer la universidad un sitio más conectado. Queremos ayudarte a descubrir
-            nuevas oportunidades, asociaciones, actividades y amistades que permanecerán toda la carrera.
+            Nuestro objetivo es hacer la universidad un sitio más conectado.
+            Queremos ayudarte a descubrir nuevas oportunidades, asociaciones,
+            actividades y amistades que permanecerán toda la carrera.
         </p>
-        <img src="imagenes/presentacion.jpg" class="section-img-right">
     </section>
 
-    <!-- REDES -->
-    <section class="redes">
+    <!-- ÚNETE A NUESTRA COMUNIDAD -->
+    <section class="seccion-comunidad fade-in">
         <h2>Únete a nuestra comunidad</h2>
 
-        <div class="redes-container">
+        <div class="contenedor-cards">
 
-            <div class="red-card">
-                <img src="imagenes/whatsapp.jpg" alt="WhatsApp">
+            <div class="card fade-in">
+                <img src="images/whatsapp.png" alt="WhatsApp" />
                 <p>Únete a nuestra comunidad de WhatsApp</p>
-                <a href="https://chat.whatsapp.com/" target="_blank" class="red-btn">Entrar</a>
+                <a href="#" class="btn">Entrar</a>
             </div>
 
-            <div class="red-card">
-                <img src="imagenes/instagram.jpg" alt="Instagram">
+            <div class="card fade-in">
+                <img src="images/instagram.png" alt="Instagram" />
                 <p>Síguenos en Instagram</p>
-                <a href="https://www.instagram.com/link.us_ufv?igsh=YXNvZ2szcjF0d2Q1&utm_source=qr"
-                   target="_blank" class="red-btn">Abrir</a>
+                <a href="#" class="btn">Abrir</a>
             </div>
 
-            <div class="red-card">
-                <img src="imagenes/tiktok.jpg" alt="TikTok">
+            <div class="card fade-in">
+                <img src="images/tiktok.png" alt="TikTok" />
                 <p>Síguenos en TikTok</p>
-                <a href="https://www.tiktok.com/@linkus.ufv?_r=1&_t=ZN-91Q3OQAbK0E"
-                   target="_blank" class="red-btn">Abrir</a>
+                <a href="#" class="btn">Abrir</a>
             </div>
 
         </div>
     </section>
+
+    <!-- IMAGEN LATERAL (OPCIONAL) -->
+    <section class="imagen-lateral fade-in">
+        <img src="images/manos.png" alt="Manos unidas" />
+    </section>
+
+    <!-- ANIMACIONES SCROLL -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
 
 </body>
 </html>
