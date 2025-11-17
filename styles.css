@@ -1,140 +1,26 @@
-/* -------------------------- */
-/* CONFIGURACIÓN GENERAL */
-/* -------------------------- */
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    color: #222;
-    text-align: center;
-}
-
-/* Añade espacio entre secciones */
-section {
-    margin-bottom: 80px;
-}
-
-/* -------------------------- */
-/* PRESENTACIÓN */
-/* -------------------------- */
-
-.presentacion {
-    padding: 60px 20px;
-}
-
-.presentacion h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.presentacion p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.6;
-}
-
-/* -------------------------- */
-/* SECCIÓN DE COMUNIDAD */
-/* -------------------------- */
-
-.seccion-comunidad {
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #f4f3ff, #ece9ff);
-    border-radius: 20px;
-}
-
-.seccion-comunidad h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-.contenedor-cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-/* -------------------------- */
-/* CARDS */
-/* -------------------------- */
-
-.card {
-    background: white;
-    width: 260px;
-    padding: 30px 20px;
-    border-radius: 20px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    transition: 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 22px rgba(120, 80, 255, 0.2);
-}
-
-.card img {
-    width: 80px;
-    margin-bottom: 15px;
-    transition: 0.3s ease;
-}
-
-.card img:hover {
-    transform: scale(1.1);
-}
-
-.card p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-/* -------------------------- */
-/* BOTONES */
-/* -------------------------- */
-
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #6a47ff;
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-    transition: 0.25s ease;
-}
-
-.btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(100, 60, 255, 0.25);
-}
-
-.btn:active {
-    transform: scale(0.97);
-}
-
-/* -------------------------- */
-/* IMAGEN LATERAL */
-/* -------------------------- */
-
-.imagen-lateral img {
-    width: 300px;
-    max-width: 80%;
-    border-radius: 20px;
-}
-
-/* -------------------------- */
-/* ANIMACIONES AL SCROLL */
-/* -------------------------- */
-
+/* Animaciones al hacer scroll */
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Más espacio entre secciones */
+.seccion {
+    margin-bottom: 80px; /* antes era padding, ahora añade separación visual */
+}
+
+/* Ajustes para cajas y botones en contacto */
+.botones-contacto {
+    gap: 40px; /* más separación entre los botones */
+}
+
+/* Opcional: añadir un efecto suave al hover de imágenes ya existentes */
+.imagen-lateral, .imagen-hero {
+    will-change: transform, box-shadow;
 }
